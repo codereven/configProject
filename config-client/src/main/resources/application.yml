@@ -7,6 +7,14 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        service-id: config-server
   application:
     name: config-client
 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8889/eureka/
